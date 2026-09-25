@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MyPortfolio - BCA Student & Web Developer</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                My<span>Portfolio</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+
+            <h3>Hello, I'm</h3>
+
+            <h1>Ankit Narwal</h1>
+
+            <h2>BCA Student & Web Developer</h2>
+
+            <div class="line"></div>
+
+            <p>
+                I am a passionate BCA student and aspiring web developer with a strong interest in programming and modern web technologies.
+                Dedicated to crafting responsive, fast, and user-friendly websites, I focus on writing clean, efficient code and delivering seamless digital experiences.
+                I enjoy turning creative ideas into functional projects and constantly learning new tools to build impactful web solutions.
+            </p>
+<div class="buttons">
+    <a href="cv.pdf" download="cv.pdf" id="downloadBtn" class="btn secondary">
+        <i class="fa-solid fa-download"></i> Download CV
+    </a>
+
+    <a href="contact.html" class="btn secondary">
+        <i class="fa-regular fa-paper-plane"></i> Contact Me
+    </a>
+</div>
+            
+
+            <!-- Social Media -->
+            <div class="social-icons">
+                <a href="https://www.facebook.com/Ankit.narwal335">
+                    <i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/in/ankit-narwal9835359835">
+                    <i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/ankit.narwal335?stkn=NWt1cDQ1cmR1cjhk">
+                    <i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+        </div>
+
+
+        <!-- Profile Image -->
+        <div class="hero-image">
+
+            <div class="circle">
+                <img src="NARWAL.png" alt="Profile Photo">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CARDS SECTION ================= -->
+    <section class="cards-section">
+
+        <h2>Let's Build Something Great Together</h2>
+
+        <div class="small-line"></div>
+
+        <div class="cards">
+
+            <!-- About -->
+            <div class="card" id="about">
+
+                <div class="icon">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+
+                <h3>About Me</h3>
+
+                <p>
+                    Get to know more about my background,
+                    education and my interests.
+                </p>
+
+                <a href="about.html">
+                    Read More →
+                </a>
+
+            </div>
+
+            <!-- Skills -->
+            <div class="card" id="skills">
+
+                <div class="icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+
+                <h3>My Skills</h3>
+
+                <p>
+                    Technologies and tools I use to build
+                    modern and responsive websites.
+                </p>
+
+                <a href="skills.html">
+                    Explore Skills →
+                </a>
+
+            </div>
+            <div class="buttons"> 
+
+            <!-- Contact -->
+            <div class="card" id="contact">
+
+                <div class="icon">
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+
+                <h3>Contact Me</h3>
+
+                <p>
+                    Have a project or just want to say hi?
+                    Let's connect.
+                </p>
+
+                <a href="contact.html">
+                    Get In Touch →
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= RESUME ================= -->
+    <section id="resume"></section>
+   <!-- Footer -->
+    <footer>
+      <p>&copy; 2026 My Website. All Rights Reserved.</p>
+      <p><a href="about.html">About</a> | <a href="contact.html">Contact</a> | Privacy Policy</p>
+    </footer>
+
+    <!-- Toast Notification Box -->
+    <div id="toast" class="toast">Resume download started!</div>
+
+    <!-- JavaScript -->
+    <script>
+      const downloadBtn = document.getElementById("downloadBtn");
+      const toast = document.getElementById("toast");
+
+      downloadBtn.addEventListener("click", function(e) {
+        e.preventDefault();       
+        toast.className = "toast show"; 
+        setTimeout(function() {
+          window.open("cv.pdf", "_blank");
+        }, 1500);
+        setTimeout(function() { 
+          toast.className = "toast"; 
+        }, 6000);
+      });
+    </script>
+  </body>
+</html>
